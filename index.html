@@ -1,0 +1,1993 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mangal D Karnad – Poet, Author & Storyteller</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Crimson+Text:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --bg: #0d0505;
+            --red: #D52028;
+            /* Updated to brand red */
+            --red2: #c51820;
+            --red3: #a40b12;
+            --yellow: #FFCB00;
+            /* Updated to brand yellow */
+            --yellow2: #e5b600;
+            --yellow3: #ccaa00;
+            --orange: #fb923c;
+            --orange2: #f97316;
+            --ink: #ffffff;
+            /* Brightened base text for better contrast */
+            --ink2: rgba(255, 255, 255, 0.75);
+            --ink3: rgba(255, 255, 255, 0.45);
+            --r: 24px;
+            --r2: 20px;
+            --r3: 16px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--ink);
+            line-height: 1.75;
+            overflow-x: hidden;
+        }
+
+        /* ══ TYPEWRITER (top right) ══ */
+        .tw-wrap {
+            position: fixed;
+            top: 24px;
+            right: 28px;
+            z-index: 9999;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.15rem;
+            /* Increased size */
+            font-weight: 600;
+            color: var(--yellow);
+            background: rgba(40, 25, 15, 0.85);
+            /* Matched dark brown background from screenshot */
+            padding: 12px 24px;
+            /* Increased padding */
+            border-radius: 50px;
+            /* Fully rounded pill shape */
+            border: 1px solid rgba(251, 191, 36, 0.15);
+            /* Subtle border matching the image */
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+            display: inline-flex;
+            align-items: center;
+        }
+
+        #tw-text {
+            transition: opacity 0.3s ease;
+            /* Smooth fade effect */
+        }
+
+        @media(max-width:960px) {
+            .tw-wrap {
+                top: 16px;
+                right: 16px;
+                font-size: 0.95rem;
+                /* Responsive adjustment */
+                padding: 10px 20px;
+            }
+        }
+
+        .tw-cursor {
+            font-weight: bold;
+            color: var(--red);
+            margin-left: 4px;
+            animation: blink 1s step-end infinite;
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+
+        /* ══ MESH BG ══ */
+        .mesh-bg {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+            background: radial-gradient(ellipse 65% 55% at 8% 8%, rgba(185, 28, 28, 0.55) 0%, transparent 55%), radial-gradient(ellipse 55% 55% at 92% 18%, rgba(251, 191, 36, 0.35) 0%, transparent 52%), radial-gradient(ellipse 55% 50% at 55% 85%, rgba(249, 115, 22, 0.35) 0%, transparent 52%), radial-gradient(ellipse 40% 40% at 15% 70%, rgba(220, 38, 38, 0.22) 0%, transparent 55%), radial-gradient(ellipse 70% 70% at 80% 60%, rgba(245, 158, 11, 0.15) 0%, transparent 60%);
+        }
+
+        .mesh-grid {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+            background-image: linear-gradient(rgba(239, 68, 68, 0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(239, 68, 68, 0.04) 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+
+        .orbs {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            animation: orbDrift 22s ease-in-out infinite;
+        }
+
+        .o1 {
+            width: 700px;
+            height: 700px;
+            background: rgba(185, 28, 28, 0.42);
+            top: -200px;
+            left: -200px;
+            animation-delay: 0s;
+        }
+
+        .o2 {
+            width: 550px;
+            height: 550px;
+            background: rgba(251, 191, 36, 0.32);
+            top: 30%;
+            right: -180px;
+            animation-delay: -7s;
+        }
+
+        .o3 {
+            width: 500px;
+            height: 500px;
+            background: rgba(249, 115, 22, 0.28);
+            bottom: -150px;
+            left: 15%;
+            animation-delay: -14s;
+        }
+
+        .o4 {
+            width: 400px;
+            height: 400px;
+            background: rgba(220, 38, 38, 0.2);
+            top: 60%;
+            left: 5%;
+            animation-delay: -5s;
+        }
+
+        .o5 {
+            width: 320px;
+            height: 320px;
+            background: rgba(245, 158, 11, 0.22);
+            top: 20%;
+            left: 45%;
+            animation-delay: -10s;
+        }
+
+        @keyframes orbDrift {
+
+            0%,
+            100% {
+                transform: translate(0, 0)scale(1);
+            }
+
+            33% {
+                transform: translate(55px, -65px)scale(1.1);
+            }
+
+            66% {
+                transform: translate(-40px, 50px)scale(0.92);
+            }
+        }
+
+        /* ══ NAV ══ */
+        nav {
+            position: fixed;
+            top: 52px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 998;
+            width: calc(100% - 48px);
+            max-width: 1200px;
+            height: auto;
+            min-height: 80px;
+            padding: 12px 28px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(25, 5, 5, 0.6);
+            backdrop-filter: blur(32px) saturate(180%);
+            -webkit-backdrop-filter: blur(32px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.11);
+            border-radius: var(--r);
+            box-shadow: 0 8px 48px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(239, 68, 68, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.07);
+        }
+
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: none;
+            background: linear-gradient(120deg, var(--red), var(--yellow), var(--orange));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.8rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-size: .76rem;
+            font-weight: 500;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            color: var(--ink2);
+            transition: color .2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--yellow);
+        }
+
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--ink);
+            font-size: 1.3rem;
+            cursor: pointer;
+        }
+
+        /* ══ GLASS ══ */
+        .glass {
+            background: rgba(255, 255, 255, 0.055);
+            backdrop-filter: blur(28px) saturate(160%);
+            -webkit-backdrop-filter: blur(28px) saturate(160%);
+            border: 1px solid rgba(255, 255, 255, 0.11);
+            border-radius: var(--r);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), inset 0 -1px 0 rgba(0, 0, 0, 0.1), 0 8px 32px rgba(0, 0, 0, 0.3);
+            transition: all .35s cubic-bezier(.4, 0, .2, 1);
+        }
+
+        .glass:hover {
+            background: rgba(255, 255, 255, 0.085);
+            border-color: rgba(239, 68, 68, 0.35);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 0 1px rgba(239, 68, 68, 0.1), 0 16px 56px rgba(0, 0, 0, 0.4), 0 0 40px rgba(239, 68, 68, 0.1);
+            transform: translateY(-6px);
+        }
+
+        /* ══ SECTIONS ══ */
+        section {
+            padding: 88px 5%;
+            position: relative;
+            z-index: 2;
+        }
+
+        .sec-label {
+            font-size: .68rem;
+            letter-spacing: .28em;
+            text-transform: uppercase;
+            font-weight: 600;
+            background: linear-gradient(90deg, var(--red), var(--yellow));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: .5rem;
+        }
+
+        .sec-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.8rem, 3vw, 2.75rem);
+            color: var(--ink);
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .sec-div {
+            width: 52px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--red2), var(--yellow2), var(--orange2));
+            border-radius: 50px;
+            margin-bottom: 2.8rem;
+        }
+
+        /* ══ HERO ══ */
+        .hero {
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            padding: 7% 5% 4%;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: .7rem;
+            letter-spacing: .28em;
+            text-transform: uppercase;
+            color: var(--yellow);
+            font-weight: 600;
+            margin-bottom: 1.4rem;
+        }
+
+        .hero-eyebrow::before {
+            content: '';
+            width: 26px;
+            height: 1.5px;
+            background: linear-gradient(90deg, var(--red), var(--yellow));
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.6rem, 4.2vw, 4.4rem);
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-title .t1 {
+            color: var(--ink);
+        }
+
+        .hero-title .t2 {
+            font-style: italic;
+            background: linear-gradient(120deg, var(--red) 0%, var(--yellow2) 55%, var(--orange) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-quote {
+            font-family: 'Crimson Text', serif;
+            font-size: 1.1rem;
+            font-style: italic;
+            color: var(--ink2);
+            line-height: 1.9;
+            margin-bottom: 2.4rem;
+            padding: 1.2rem 1.4rem;
+            background: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.09);
+            border-left: 3px solid var(--red);
+            border-radius: 0 var(--r3) var(--r3) 0;
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2.5rem;
+        }
+
+        .btn-fire {
+            display: inline-block;
+            padding: 13px 32px;
+            text-decoration: none;
+            font-size: .78rem;
+            font-weight: 600;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            background: linear-gradient(135deg, var(--red2), var(--yellow2));
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            border-radius: 50px;
+            position: relative;
+            overflow: hidden;
+            transition: all .3s;
+            box-shadow: 0 0 32px rgba(220, 38, 38, 0.5), 0 4px 20px rgba(220, 38, 38, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-fire::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, var(--yellow2), var(--orange2));
+            opacity: 0;
+            transition: opacity .3s;
+            border-radius: 50px;
+        }
+
+        .btn-fire:hover {
+            box-shadow: 0 0 50px rgba(251, 191, 36, 0.55), 0 6px 28px rgba(251, 191, 36, 0.35);
+            transform: translateY(-2px);
+        }
+
+        .btn-fire:hover::after {
+            opacity: 1;
+        }
+
+        .btn-fire span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn-ghost {
+            display: inline-block;
+            padding: 12px 32px;
+            text-decoration: none;
+            font-size: .78rem;
+            font-weight: 600;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            border: 1px solid rgba(239, 68, 68, 0.42);
+            color: var(--yellow3);
+            background: rgba(239, 68, 68, 0.08);
+            backdrop-filter: blur(16px);
+            border-radius: 50px;
+            transition: all .3s;
+        }
+
+        .btn-ghost:hover {
+            border-color: var(--yellow);
+            background: rgba(251, 191, 36, 0.14);
+            color: var(--yellow);
+            box-shadow: 0 0 24px rgba(251, 191, 36, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .stat-card {
+            flex: 1;
+            padding: 1.2rem;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--r2);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 4px 20px rgba(0, 0, 0, 0.25);
+            text-align: center;
+        }
+
+        .stat-num {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--yellow), var(--red));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-lbl {
+            font-size: .64rem;
+            letter-spacing: .16em;
+            text-transform: uppercase;
+            color: var(--ink3);
+            margin-top: 2px;
+            font-weight: 500;
+        }
+
+        .hero-right {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .book-visual-wrap {
+            width: 100%;
+            max-width: 400px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(40px) saturate(160%);
+            border: 1px solid rgba(255, 255, 255, 0.13);
+            border-radius: 28px;
+            padding: 2.5rem;
+            box-shadow: 0 0 80px rgba(185, 28, 28, 0.3), 0 0 160px rgba(251, 191, 36, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 24px 80px rgba(0, 0, 0, 0.45);
+        }
+
+        .book-open {
+            aspect-ratio: 1.4/1;
+            background: linear-gradient(160deg, rgba(185, 28, 28, 0.15), rgba(251, 191, 36, 0.1));
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: var(--r3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+        }
+
+        .book-open::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 30% 25%, rgba(220, 38, 38, 0.25), transparent 55%), radial-gradient(ellipse at 70% 75%, rgba(251, 191, 36, 0.2), transparent 50%);
+        }
+
+        .bpages {
+            width: 80%;
+            height: 75%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .bpage {
+            width: 47%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            justify-content: center;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .bpage.left {
+            border-right: 2px solid rgba(239, 68, 68, 0.5);
+            border-radius: 4px 0 0 4px;
+        }
+
+        .bpage.right {
+            border-left: none;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .bline {
+            height: 2px;
+            background: rgba(255, 255, 255, 0.07);
+            border-radius: 1px;
+            width: 100%;
+        }
+
+        .bline.a {
+            background: linear-gradient(90deg, var(--red2), transparent);
+            width: 70%;
+        }
+
+        .bline.b {
+            background: linear-gradient(90deg, var(--yellow2), transparent);
+            width: 60%;
+        }
+
+        .bline.s {
+            width: 55%;
+        }
+
+        .bspine {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--red), var(--yellow));
+            border-radius: 2px;
+            box-shadow: 0 0 14px var(--red);
+        }
+
+        .bft {
+            position: absolute;
+            font-family: 'Crimson Text', serif;
+            font-style: italic;
+            font-size: .8rem;
+            color: rgba(251, 191, 36, 0.6);
+            white-space: nowrap;
+            animation: bfloat 6s ease-in-out infinite;
+        }
+
+        .bft1 {
+            top: 15%;
+            left: 5%;
+        }
+
+        .bft2 {
+            bottom: 18%;
+            right: 4%;
+            font-size: .7rem;
+            animation-delay: -3s;
+        }
+
+        @keyframes bfloat {
+
+            0%,
+            100% {
+                transform: translateY(0);
+                opacity: .6;
+            }
+
+            50% {
+                transform: translateY(-7px);
+                opacity: .95;
+            }
+        }
+
+        .book-labels {
+            display: flex;
+            gap: .65rem;
+            flex-wrap: wrap;
+        }
+
+        .blabel {
+            font-size: .62rem;
+            font-weight: 600;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            padding: 5px 12px;
+            border-radius: 50px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--ink2);
+            backdrop-filter: blur(10px);
+            transition: all .2s;
+        }
+
+        .blabel:hover {
+            border-color: var(--yellow);
+            color: var(--yellow);
+            background: rgba(251, 191, 36, 0.1);
+        }
+
+        /* ══ STRIP ══ */
+        .story-strip {
+            position: relative;
+            z-index: 2;
+            padding: 50px 5%;
+        }
+
+        .strip-inner {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .strip-card {
+            padding: 2rem;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(28px) saturate(160%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--r);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 4px 24px rgba(0, 0, 0, 0.25);
+            transition: all .3s;
+        }
+
+        .strip-card:hover {
+            border-color: rgba(251, 191, 36, 0.32);
+            box-shadow: 0 0 32px rgba(251, 191, 36, 0.12), 0 8px 32px rgba(0, 0, 0, 0.3);
+            transform: translateY(-4px);
+        }
+
+        .snum {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--yellow), var(--red));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: .3rem;
+        }
+
+        .slbl {
+            font-size: .68rem;
+            letter-spacing: .2em;
+            text-transform: uppercase;
+            color: var(--ink3);
+            font-weight: 500;
+        }
+
+        /* ══ ABOUT ══ */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.85fr;
+            gap: 4.5rem;
+            align-items: start;
+        }
+
+        .about-photo {
+            aspect-ratio: 3/4;
+            background: linear-gradient(150deg, rgba(185, 28, 28, .22), rgba(251, 191, 36, .14), rgba(249, 115, 22, .1));
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--r);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5.5rem;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 60px rgba(185, 28, 28, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }
+
+        .about-photo::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 30% 25%, rgba(220, 38, 38, 0.2), transparent 55%);
+        }
+
+        .about-corner {
+            position: absolute;
+            bottom: -10px;
+            right: -10px;
+            width: 50%;
+            height: 50%;
+            border-right: 2px solid var(--red);
+            border-bottom: 2px solid var(--yellow);
+            border-radius: 0 0 var(--r3) 0;
+        }
+
+        .about-bio p {
+            font-size: .94rem;
+            color: var(--ink2);
+            margin-bottom: 1.2rem;
+            line-height: 1.95;
+            font-weight: 300;
+        }
+
+        .about-pullquote {
+            font-family: 'Crimson Text', serif;
+            font-size: 1.15rem;
+            font-style: italic;
+            color: var(--yellow3);
+            line-height: 1.75;
+            padding: 1.2rem 1.6rem;
+            margin: 1.4rem 0;
+            background: rgba(251, 191, 36, 0.07);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(251, 191, 36, 0.2);
+            border-radius: var(--r3);
+        }
+
+        .tags-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .6rem;
+            margin-top: 1.5rem;
+        }
+
+        .atag {
+            font-size: .68rem;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            padding: 5px 14px;
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            color: var(--yellow3);
+            font-weight: 500;
+            background: rgba(239, 68, 68, 0.06);
+            backdrop-filter: blur(10px);
+            border-radius: 50px;
+            transition: all .2s;
+        }
+
+        .atag:hover {
+            background: rgba(251, 191, 36, 0.14);
+            border-color: var(--yellow);
+            box-shadow: 0 0 12px rgba(251, 191, 36, 0.2);
+        }
+
+        /* ══ BOOKS ══ */
+        .featured-book {
+            display: grid;
+            grid-template-columns: 1fr 1.75fr;
+            gap: 4rem;
+            align-items: center;
+            padding: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .fbook-cover {
+            aspect-ratio: 2/3;
+            background: linear-gradient(160deg, #1f0505, #3b0a0a, #1a0c05);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: var(--r);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2.5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 70px rgba(185, 28, 28, 0.35), 0 0 130px rgba(251, 191, 36, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }
+
+        .fbook-cover::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 25% 20%, rgba(220, 38, 38, 0.35), transparent 50%), radial-gradient(ellipse at 75% 80%, rgba(251, 191, 36, 0.22), transparent 50%);
+        }
+
+        .fbook-cover::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: repeating-linear-gradient(-45deg, transparent, transparent 6px, rgba(239, 68, 68, 0.025) 6px, rgba(239, 68, 68, 0.025) 12px);
+        }
+
+        .fbook-spine {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 14px;
+            background: linear-gradient(180deg, var(--red2), var(--yellow2), var(--orange2));
+            border-radius: var(--r) 0 0 var(--r);
+            opacity: .9;
+            box-shadow: 0 0 16px var(--red2);
+        }
+
+        .fbook-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: var(--ink);
+            line-height: 1.25;
+            position: relative;
+            z-index: 1;
+            margin-bottom: 1rem;
+        }
+
+        .fbook-deco {
+            width: 34px;
+            height: 2px;
+            background: linear-gradient(90deg, var(--red), var(--yellow));
+            margin: 0 auto .8rem;
+            border-radius: 2px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .fbook-author {
+            font-family: 'Crimson Text', serif;
+            font-size: .82rem;
+            letter-spacing: .18em;
+            color: var(--ink3);
+            text-transform: uppercase;
+            font-style: italic;
+            position: relative;
+            z-index: 1;
+        }
+
+        .fbook-badge {
+            font-size: .62rem;
+            font-weight: 700;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            padding: 5px 16px;
+            margin-bottom: 1.2rem;
+            background: linear-gradient(90deg, var(--red2), var(--yellow2));
+            color: #fff;
+            border-radius: 50px;
+            display: inline-block;
+            box-shadow: 0 0 20px rgba(220, 38, 38, 0.4);
+        }
+
+        .fbook-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.9rem;
+            color: var(--ink);
+            margin-bottom: .6rem;
+            line-height: 1.2;
+        }
+
+        .fbook-price {
+            font-size: .85rem;
+            color: var(--ink3);
+            margin-bottom: 1rem;
+        }
+
+        .fbook-price strong {
+            background: linear-gradient(90deg, var(--yellow), var(--red));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 1.15rem;
+        }
+
+        .fbook-excerpt {
+            font-family: 'Crimson Text', serif;
+            font-size: 1.02rem;
+            font-style: italic;
+            color: var(--ink2);
+            line-height: 1.9;
+            margin-bottom: 1rem;
+        }
+
+        .fbook-pullquote {
+            font-family: 'Crimson Text', serif;
+            font-style: italic;
+            font-size: .97rem;
+            color: var(--yellow3);
+            padding: .9rem 1.2rem;
+            margin-bottom: 1.5rem;
+            background: rgba(251, 191, 36, 0.07);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(251, 191, 36, 0.2);
+            border-radius: var(--r3);
+            line-height: 1.75;
+        }
+
+        .preorder-row {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .shelf-label {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.05rem;
+            color: var(--ink2);
+            margin-bottom: 1.5rem;
+        }
+
+        .books-shelf {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.8rem;
+        }
+
+        .shelf-book {
+            overflow: hidden;
+            border-radius: var(--r);
+        }
+
+        .shelf-cover {
+            aspect-ratio: 2/3;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1.8rem;
+            text-align: center;
+        }
+
+        .sc1 {
+            background: linear-gradient(160deg, #1f0505, #3b0a0a);
+        }
+
+        .sc2 {
+            background: linear-gradient(160deg, #1a0800, #3b1800);
+        }
+
+        .sc3 {
+            background: linear-gradient(160deg, #0d0300, #2a0e00);
+        }
+
+        .sc1::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 30% 30%, rgba(220, 38, 38, 0.32), transparent 60%);
+        }
+
+        .sc2::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 70% 30%, rgba(251, 191, 36, 0.28), transparent 60%);
+        }
+
+        .sc3::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 50% 70%, rgba(249, 115, 22, 0.26), transparent 60%);
+        }
+
+        .sspine {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 10px;
+            border-radius: var(--r) 0 0 var(--r);
+        }
+
+        .ss1 {
+            background: linear-gradient(180deg, var(--red2), var(--yellow2));
+        }
+
+        .ss2 {
+            background: linear-gradient(180deg, var(--yellow2), var(--orange2));
+        }
+
+        .ss3 {
+            background: linear-gradient(180deg, var(--orange2), var(--red2));
+        }
+
+        .sctitle {
+            font-family: 'Playfair Display', serif;
+            font-size: .92rem;
+            color: var(--ink);
+            line-height: 1.35;
+            position: relative;
+            z-index: 1;
+            margin-bottom: .7rem;
+        }
+
+        .scline {
+            width: 26px;
+            height: 1.5px;
+            background: linear-gradient(90deg, var(--red), var(--yellow));
+            margin: 0 auto .7rem;
+            border-radius: 2px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .scau {
+            font-size: .6rem;
+            letter-spacing: .18em;
+            color: var(--ink3);
+            text-transform: uppercase;
+            font-style: italic;
+            position: relative;
+            z-index: 1;
+        }
+
+        .shelf-info {
+            padding: 1.4rem;
+        }
+
+        .shelf-wip {
+            display: inline-block;
+            font-size: .6rem;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            border: 1px solid rgba(251, 191, 36, 0.32);
+            color: var(--yellow3);
+            padding: 3px 10px;
+            margin-bottom: .7rem;
+            background: rgba(251, 191, 36, 0.06);
+            border-radius: 50px;
+        }
+
+        .shelf-info h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: .98rem;
+            color: var(--ink);
+            margin-bottom: .4rem;
+        }
+
+        .shelf-info p {
+            font-size: .82rem;
+            color: var(--ink3);
+            line-height: 1.7;
+            font-weight: 300;
+        }
+
+        /* ══ SPEAKING ══ */
+        .speak-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.4rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .speak-card {
+            padding: 2rem;
+        }
+
+        .speak-icon {
+            width: 46px;
+            height: 46px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            border: 1px solid;
+        }
+
+        .si-r {
+            color: var(--red);
+            background: rgba(220, 38, 38, 0.1);
+            border-color: rgba(220, 38, 38, 0.28);
+        }
+
+        .si-y {
+            color: var(--yellow);
+            background: rgba(251, 191, 36, 0.1);
+            border-color: rgba(251, 191, 36, 0.28);
+        }
+
+        .si-o {
+            color: var(--orange);
+            background: rgba(249, 115, 22, 0.1);
+            border-color: rgba(249, 115, 22, 0.28);
+        }
+
+        .si-r2 {
+            color: var(--yellow3);
+            background: rgba(245, 158, 11, 0.1);
+            border-color: rgba(245, 158, 11, 0.28);
+        }
+
+        .speak-card h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+            color: var(--ink);
+            margin-bottom: .5rem;
+        }
+
+        .speak-card p {
+            font-size: .84rem;
+            color: var(--ink2);
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        .topics-card {
+            padding: 1.8rem;
+        }
+
+        .topics-card h4 {
+            font-size: .66rem;
+            letter-spacing: .22em;
+            text-transform: uppercase;
+            color: var(--yellow);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .topics-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .6rem;
+        }
+
+        .tpill {
+            font-size: .72rem;
+            padding: 5px 15px;
+            border: 1px solid rgba(251, 191, 36, 0.3);
+            color: var(--yellow3);
+            background: rgba(251, 191, 36, 0.06);
+            border-radius: 50px;
+            transition: all .2s;
+            cursor: default;
+        }
+
+        .tpill:hover {
+            border-color: var(--yellow);
+            background: rgba(251, 191, 36, 0.14);
+            box-shadow: 0 0 14px rgba(251, 191, 36, 0.22);
+        }
+
+        /* ══ BLOGS ══ */
+        .blogs-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.8rem;
+        }
+
+        .blog-card {
+            overflow: hidden;
+            border-radius: var(--r);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-thumb {
+            height: 148px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.8rem;
+            border-radius: var(--r) var(--r) 0 0;
+        }
+
+        .bt1 {
+            background: linear-gradient(135deg, rgba(185, 28, 28, 0.3), rgba(251, 191, 36, 0.2));
+        }
+
+        .bt2 {
+            background: linear-gradient(135deg, rgba(251, 191, 36, 0.28), rgba(249, 115, 22, 0.2));
+        }
+
+        .bt3 {
+            background: linear-gradient(135deg, rgba(249, 115, 22, 0.28), rgba(185, 28, 28, 0.22));
+        }
+
+        .blog-body {
+            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-date {
+            font-size: .68rem;
+            letter-spacing: .1em;
+            color: var(--yellow2);
+            text-transform: uppercase;
+            font-weight: 500;
+            margin-bottom: .5rem;
+        }
+
+        .blog-body h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: .98rem;
+            color: var(--ink);
+            margin-bottom: .7rem;
+            line-height: 1.42;
+        }
+
+        .blog-body p {
+            font-family: 'Crimson Text', serif;
+            font-size: .96rem;
+            color: var(--ink2);
+            line-height: 1.72;
+            flex: 1;
+            font-style: italic;
+        }
+
+        .blog-read {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            margin-top: 1rem;
+            font-size: .72rem;
+            font-weight: 600;
+            letter-spacing: .09em;
+            text-transform: uppercase;
+            background: linear-gradient(90deg, var(--red), var(--yellow2));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+        }
+
+        /* ══ BEYOND ══ */
+        .beyond-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .venture-card {
+            padding: 2.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .vc-num {
+            font-family: 'Playfair Display', serif;
+            font-size: 4.5rem;
+            font-weight: 700;
+            position: absolute;
+            top: .4rem;
+            right: 1.2rem;
+            background: linear-gradient(135deg, rgba(220, 38, 38, 0.14), rgba(251, 191, 36, 0.1));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+        }
+
+        .venture-icon {
+            font-size: 2rem;
+            margin-bottom: 1.1rem;
+        }
+
+        .venture-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.42rem;
+            color: var(--ink);
+            margin-bottom: .8rem;
+        }
+
+        .venture-card p {
+            font-size: .88rem;
+            color: var(--ink2);
+            line-height: 1.88;
+            font-weight: 300;
+        }
+
+        .vlink {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            margin-top: 1.3rem;
+            font-size: .74rem;
+            font-weight: 600;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            background: linear-gradient(90deg, var(--red), var(--yellow2));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+        }
+
+        /* ══ CONTACT ══ */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 5rem;
+            align-items: start;
+        }
+
+        .cinfo-quote {
+            font-family: 'Crimson Text', serif;
+            font-size: 1.05rem;
+            font-style: italic;
+            color: var(--ink2);
+            margin-bottom: 2rem;
+            line-height: 1.9;
+            padding: 1.2rem 1.4rem;
+            background: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.09);
+            border-radius: var(--r3);
+        }
+
+        .cdet {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 1.2rem;
+        }
+
+        .cicon {
+            width: 40px;
+            height: 40px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, rgba(220, 38, 38, 0.15), rgba(251, 191, 36, 0.1));
+            border: 1px solid rgba(239, 68, 68, 0.22);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: .84rem;
+            color: var(--yellow);
+            flex-shrink: 0;
+            backdrop-filter: blur(12px);
+        }
+
+        .cdet a {
+            color: var(--ink2);
+            text-decoration: none;
+            font-size: .88rem;
+            transition: color .2s;
+        }
+
+        .cdet a:hover {
+            color: var(--yellow);
+        }
+
+        .social-row {
+            display: flex;
+            gap: .7rem;
+            margin-top: 1.8rem;
+        }
+
+        .sicon {
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--ink2);
+            text-decoration: none;
+            font-size: .88rem;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(16px);
+            transition: all .25s;
+        }
+
+        .sicon:hover {
+            border-color: var(--yellow);
+            color: var(--yellow);
+            background: rgba(251, 191, 36, 0.1);
+            box-shadow: 0 0 20px rgba(251, 191, 36, 0.28);
+        }
+
+        .cform {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding: 2.5rem;
+        }
+
+        .frow {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .cform input,
+        .cform textarea {
+            width: 100%;
+            padding: 13px 16px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            color: var(--ink);
+            font-family: 'Inter', sans-serif;
+            font-size: .88rem;
+            outline: none;
+            transition: all .25s;
+        }
+
+        .cform input::placeholder,
+        .cform textarea::placeholder {
+            color: var(--ink3);
+        }
+
+        .cform input:focus,
+        .cform textarea:focus {
+            border-color: var(--yellow);
+            background: rgba(251, 191, 36, 0.07);
+            box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.1);
+        }
+
+        .cform textarea {
+            resize: vertical;
+            min-height: 128px;
+        }
+
+        footer {
+            position: relative;
+            z-index: 2;
+            background: rgba(0, 0, 0, 0.45);
+            backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(255, 255, 255, 0.07);
+            text-align: center;
+            padding: 1.8rem;
+            font-size: .74rem;
+            letter-spacing: .05em;
+            color: var(--ink3);
+        }
+
+        footer a {
+            color: rgba(251, 191, 36, 0.6);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: var(--yellow);
+        }
+
+        #cglow {
+            position: fixed;
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(220, 38, 38, 0.07), transparent 70%);
+            pointer-events: none;
+            z-index: 997;
+            transform: translate(-50%, -50%);
+            mix-blend-mode: screen;
+            transition: opacity .3s;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(26px);
+            transition: opacity .6s ease, transform .6s ease;
+        }
+
+        .reveal-l {
+            opacity: 0;
+            transform: translateX(-26px);
+            transition: opacity .6s ease, transform .6s ease;
+        }
+
+        .reveal-r {
+            opacity: 0;
+            transform: translateX(26px);
+            transition: opacity .6s ease, transform .6s ease;
+        }
+
+        .visible {
+            opacity: 1 !important;
+            transform: none !important;
+        }
+
+        @media(max-width:960px) {
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 9% 5%;
+            }
+
+            .hero-right {
+                display: none;
+            }
+
+            .about-grid,
+            .featured-book,
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+
+            .books-shelf,
+            .blogs-grid,
+            .beyond-grid,
+            .speak-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .strip-inner,
+            .frow {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 65px 4%;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            nav {
+                width: calc(100% - 32px);
+                top: 52px;
+            }
+
+            .nav-links.open {
+                display: flex;
+                flex-direction: column;
+                position: fixed;
+                top: 122px;
+                left: 16px;
+                right: 16px;
+                background: rgba(20, 5, 5, 0.96);
+                backdrop-filter: blur(32px);
+                padding: 1.5rem 1.8rem;
+                gap: 1.2rem;
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                border-radius: var(--r);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="cglow"></div>
+    <div class="mesh-bg"></div>
+    <div class="mesh-grid"></div>
+    <div class="orbs">
+        <div class="orb o1"></div>
+        <div class="orb o2"></div>
+        <div class="orb o3"></div>
+        <div class="orb o4"></div>
+        <div class="orb o5"></div>
+    </div>
+
+    <!-- ══ TYPEWRITER TICKER (fixed top right) ══ -->
+    <div class="tw-wrap">
+        <span id="tw-text"></span><span class="tw-cursor">|</span>
+    </div>
+
+    <!-- ══ FLOATING NAV ══ -->
+    <nav>
+        <a href="#" class="nav-author-brand"
+            style="display: flex; align-items: center; gap: 16px; text-decoration: none;">
+            <img src="https://mangalkarnad.com/wp-content/uploads/2025/08/Mangal-D-Karnad.webp" alt="Mangal D Karnad"
+                style="width: 96px; height: 96px; border-radius: 50%; object-fit: cover; border: 3px solid rgba(213, 32, 40, 0.4); box-shadow: 0 6px 16px rgba(0,0,0,0.4);">
+            <div style="display: flex; flex-direction: column; justify-content: center;">
+                <span class="nav-logo" style="font-size: 2.2rem; line-height: 1.15; padding-bottom: 4px;">Mangal D
+                    Karnad</span>
+                <span
+                    style="font-size: 1.1rem; color: var(--ink2); font-weight: 600; letter-spacing: 0.05em; font-family: 'Inter', sans-serif;">Author
+                    &amp; Storyteller</span>
+            </div>
+        </a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#aboutme">About</a></li>
+            <li><a href="#mybooks">Books</a></li>
+            <li><a href="#mediaandspeaking">Speaking</a></li>
+            <li><a href="#beyond">Beyond</a></li>
+            <li><a href="#blogs">Blogs</a></li>
+            <li><a href="#form">Contact</a></li>
+        </ul>
+        <button class="hamburger" id="ham"><i class="fa fa-bars"></i></button>
+    </nav>
+
+    <!-- ══ HERO ══ -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-eyebrow reveal">Poems &amp; Stories Woven from Memory</div>
+            <h1 class="hero-title reveal"><span class="t1">Stories That Live<br>In The Spaces<br>Between </span><span
+                    class="t2">Words</span></h1>
+            <div class="hero-quote reveal">"Rooted in Mulki, Karnataka — childhood stories with moral insight,
+                reflections on life, belonging, resilience, and the quiet magic found in everyday moments."</div>
+            <div class="hero-btns reveal">
+                <a href="#mybooks" class="btn-fire"><span>Explore My Books</span></a>
+                <a href="#form" class="btn-ghost">Get Book Updates</a>
+            </div>
+            <div class="hero-stats reveal">
+                <div class="stat-card">
+                    <div class="stat-num">3+</div>
+                    <div class="stat-lbl">Books in Progress</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-num">∞</div>
+                    <div class="stat-lbl">Stories to Tell</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-num">2</div>
+                    <div class="stat-lbl">Ventures Founded</div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-right reveal-r">
+            <div class="book-visual-wrap" style="padding: 1.5rem;">
+                <img src="https://mangalkarnad.com/wp-content/uploads/2026/03/Folded-Away-Softly-Book-01.png"
+                    alt="Folded Away Softly Book Cover"
+                    style="width: 100%; height: auto; border-radius: var(--r3); margin-bottom: 1.5rem; display: block; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);">
+                <div class="book-labels">
+                    <span class="blabel">Poetry Collection</span><span class="blabel">Children's Stories</span>
+                    <span class="blabel">Mulki, Karnataka</span><span class="blabel">Pre-Order Open</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══ STRIP ══ -->
+    <div class="story-strip">
+        <div class="strip-inner">
+            <div class="strip-card reveal">
+                <div class="snum">3+</div>
+                <div class="slbl">Books in Progress</div>
+            </div>
+            <div class="strip-card reveal">
+                <div class="snum">∞</div>
+                <div class="slbl">Stories to Tell</div>
+            </div>
+            <div class="strip-card reveal">
+                <div class="snum">1</div>
+                <div class="slbl">Coastal Hometown</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ══ ABOUT ══ -->
+    <section id="aboutme">
+        <div class="about-grid">
+            <div class="reveal-l">
+                <div class="about-photo glass"
+                    style="background-image: url('https://mangalkarnad.com/wp-content/uploads/2025/08/Mangal-D-Karnad.webp'); background-size: cover; background-position: center;">
+                    <div class="about-corner"></div>
+                </div>
+            </div>
+            <div class="reveal-r">
+                <p class="sec-label">About Me</p>
+                <h2 class="sec-title">The Author Behind the Stories</h2>
+                <div class="sec-div"></div>
+                <p>Mangal D Karnad's author journey is shaped by a lifelong relationship with words, observation, and
+                    lived experience. Her writing spans poems and stories, and children's literature that explore
+                    memory, belonging, and everyday life.</p>
+                <div class="about-pullquote">"Growing up in Mulki, a small coastal town, taught me that the richest
+                    stories aren't invented — they are remembered."</div>
+                <p>Alongside children's fiction, Mangal writes poems about life examining ambition, ageing, work,
+                    relationships, and personal growth — grounded, reflective, and intentionally restrained.</p>
+                <p>Beyond writing, she is the co-founder of <strong style="color:var(--red)">FableSquare</strong> and
+                    the creative soul behind <strong style="color:var(--yellow)">Yarn Bear</strong>.</p>
+                <div class="tags-row"><span class="atag">Poetry</span><span class="atag">Children's Fiction</span><span
+                        class="atag">Storytelling</span><span class="atag">Branding</span><span class="atag">Mulki,
+                        Karnataka</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══ BOOKS ══ -->
+    <section id="mybooks">
+        <p class="sec-label reveal">The Shelf</p>
+        <h2 class="sec-title reveal">My Books</h2>
+        <div class="sec-div reveal"></div>
+        <div class="featured-book glass reveal">
+            <div class="fbook-cover"
+                style="background-image: url('https://mangalkarnad.com/wp-content/uploads/2026/03/Folded-Away-Softly-Book-01.png'); background-size: cover; background-position: center; border: none; box-shadow: none;">
+            </div>
+            <div class="fbook-info">
+                <span class="fbook-badge">Pre-Order Now · INR 150</span>
+                <h3>Folded Away Softly</h3>
+                <p class="fbook-price">Special Price: <strong>INR 150</strong> &nbsp;·&nbsp; Until 15 March</p>
+                <p class="fbook-excerpt">A contemporary poetry collection — short, meaningful poems that linger on
+                    life's small, resonant moments. Sensory and emotional snapshots that stay long after they have
+                    passed.</p>
+                <div class="fbook-pullquote">"These poems dwell in the lingering scent of jasmine at twilight, the hush
+                    after a truth left unspoken, and the ache and tenderness of everyday living."</div>
+                <p class="fbook-excerpt" style="font-size:.88rem;">Each poem is paired with an illustration and a brief
+                    backstory — for readers who value restraint, reflection, and the quiet stories we carry within us.
+                </p>
+                <div class="preorder-row">
+                    <a href="mailto:karnad.mangal@gmail.com" class="btn-fire"><span><i class="fa fa-envelope"></i>&nbsp;
+                            Order via Email</span></a>
+                    <a href="https://api.whatsapp.com/send/?phone=919902016165&text=Hi+Mangal+Karnad" target="_blank"
+                        class="btn-ghost"><i class="fab fa-whatsapp"></i>&nbsp; WhatsApp</a>
+                </div>
+            </div>
+        </div>
+        <p class="shelf-label reveal">Coming Soon — The Collection</p>
+        <div class="books-shelf">
+            <div class="shelf-book glass reveal">
+                <div class="shelf-cover sc1"
+                    style="background-image: url('https://mangalkarnad.com/wp-content/uploads/2025/11/Mangal-D-Karnad-Some-Silence-Belong-to-Me-2048x1366.webp'); background-size: cover; background-position: center; border: none;">
+                </div>
+                <div class="shelf-info"><span class="shelf-wip">Coming Soon</span>
+                    <h4>Some Silences Belong to Me</h4>
+                    <p>Short meaningful poems that belong to the silences we often overlook.</p>
+                </div>
+            </div>
+            <div class="shelf-book glass reveal">
+                <div class="shelf-cover sc2"
+                    style="background-image: url('https://mangalkarnad.com/wp-content/uploads/2025/11/Malli-and-the-Mulki-Stories-2048x1366.png'); background-size: cover; background-position: center; border: none;">
+                </div>
+                <div class="shelf-info"><span class="shelf-wip">Coming Soon</span>
+                    <h4>Malli's Stories for Children</h4>
+                    <p>Stories for kids from a time when quiet authority, rituals, and generosity shaped homes.</p>
+                </div>
+            </div>
+            <div class="shelf-book glass reveal">
+                <div class="shelf-cover sc3"
+                    style="background-image: url('https://mangalkarnad.com/wp-content/uploads/2026/03/Book-Folded-Away-Softly-1.png'); background-size: cover; background-position: center; border: none;">
+                </div>
+                <div class="shelf-info"><span class="shelf-wip">Work in Progress</span>
+                    <h4>More Stories Coming</h4>
+                    <p>Stay tuned as more poems and stories take shape from memory and lived experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══ SPEAKING ══ -->
+    <section id="mediaandspeaking">
+        <p class="sec-label reveal">Engagements</p>
+        <h2 class="sec-title reveal">Media &amp; Speaking</h2>
+        <div class="sec-div reveal"></div>
+        <div class="speak-grid">
+            <div class="speak-card glass reveal">
+                <div class="speak-icon si-r"><i class="fa fa-ribbon"></i></div>
+                <h4>Cancer Society of India</h4>
+                <p>Shared insights on using social media to amplify awareness and impact.</p>
+            </div>
+            <div class="speak-card glass reveal">
+                <div class="speak-icon si-y"><i class="fa fa-comments"></i></div>
+                <h4>Brand Summit 2026 — PES University</h4>
+                <p>Panelist on ethical branding and authentic storytelling at GJB Auditorium.</p>
+            </div>
+            <div class="speak-card glass reveal">
+                <div class="speak-icon si-o"><i class="fa fa-microphone"></i></div>
+                <h4>Podcasts &amp; Webinars</h4>
+                <p>Open to podcast and webinar participation covering reinvention and brand voice.</p>
+            </div>
+            <div class="speak-card glass reveal">
+                <div class="speak-icon si-r2"><i class="fa fa-users"></i></div>
+                <h4>Panels &amp; Live Events</h4>
+                <p>Bringing creative writing and marketing insight to live panel discussions.</p>
+            </div>
+        </div>
+        <div class="topics-card glass reveal">
+            <h4>Speaks On</h4>
+            <div class="topics-row"><span class="tpill">Branding</span><span class="tpill">Marketing</span><span
+                    class="tpill">Storytelling</span><span class="tpill">Creativity</span><span
+                    class="tpill">Reinvention</span><span class="tpill">Ethical Business</span><span
+                    class="tpill">Social Media</span><span class="tpill">Author Journey</span></div>
+        </div>
+    </section>
+
+    <!-- ══ BLOGS ══ -->
+    <section id="blogs">
+        <p class="sec-label reveal">Musings</p>
+        <h2 class="sec-title reveal">Latest Blogs</h2>
+        <div class="sec-div reveal"></div>
+        <div class="blogs-grid">
+            <div class="blog-card glass reveal">
+                <div class="blog-thumb bt1"
+                    style="background-image: url('https://mangalkarnad.com/wp-content/uploads/2026/01/Why-Childrens-Story-Books-Still-Matter-Mangal-Karnad-1024x658.png'); background-size: cover; background-position: center;">
+                </div>
+                <div class="blog-body">
+                    <p class="blog-date">March 7, 2026</p>
+                    <h4>Memory and Loss of a Child: What the World Forgets After a School Shooting</h4>
+                    <p>"Memory is rarely passive — a reflection on grief and what the world chooses to forget."</p><a
+                        href="https://mangalkarnad.com/memory-and-loss-of-a-child-what-the-world-forgets-after-a-school-shooting/"
+                        target="_blank" class="blog-read">Read More <i class="fa fa-arrow-right fa-xs"></i></a>
+                </div>
+            </div>
+            <div class="blog-card glass reveal">
+                <div class="blog-thumb bt2"
+                    style="background-image: url('https://mangalkarnad.com/wp-content/uploads/2026/03/My-Story-Writing-Process-Preserving-My-Childhood-Memories-768x494.png'); background-size: cover; background-position: center;">
+                </div>
+                <div class="blog-body">
+                    <p class="blog-date">March 2, 2026</p>
+                    <h4>My Story Writing Process – Preserving My Childhood Memories</h4>
+                    <p>"An honest look into preserving childhood memories as meaningful stories."</p><a
+                        href="https://mangalkarnad.com/my-story-writing-process/" target="_blank" class="blog-read">Read
+                        More <i class="fa fa-arrow-right fa-xs"></i></a>
+                </div>
+            </div>
+            <div class="blog-card glass reveal">
+                <div class="blog-thumb bt3"
+                    style="background-image: url('https://mangalkarnad.com/wp-content/uploads/2026/02/Brand-Storytelling-Founders-Values-Shaping-Businesses-1024x658.jpg'); background-size: cover; background-position: center;">
+                </div>
+                <div class="blog-body">
+                    <p class="blog-date">February 24, 2026</p>
+                    <h4>Brand Storytelling: Founders' Values Shaping Businesses</h4>
+                    <p>"Products change, markets shift — the founder's story remains the constant worth telling."</p><a
+                        href="https://mangalkarnad.com/brand-storytelling-founders-values-shaping-businesses/"
+                        target="_blank" class="blog-read">Read More <i class="fa fa-arrow-right fa-xs"></i></a>
+                </div>
+            </div>
+        </div>
+        <div style="text-align:center;margin-top:2.5rem;" class="reveal"><a href="https://mangalkarnad.com/blogs/"
+                target="_blank" class="btn-ghost">View All Blogs</a></div>
+    </section>
+
+    <!-- ══ BEYOND ══ -->
+    <section id="beyond">
+        <p class="sec-label reveal">Ventures</p>
+        <h2 class="sec-title reveal">Beyond Writing</h2>
+        <div class="sec-div reveal"></div>
+        <div class="beyond-grid">
+            <a href="https://www.fablesquare.com/" target="_blank"
+                style="text-decoration: none; color: inherit; display: block;">
+                <div class="venture-card reveal"
+                    style="text-align: center; background: transparent; border: 1px solid #DC2626; border-radius: 4px; padding: 3rem 2.5rem; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; transition: transform 0.3s ease;">
+                    <img src="https://fablesquare.com/wp-content/uploads/2021/01/FableSquare-Digital-Marketing-agency-logo-2.png"
+                        alt="FableSquare Logo" style="height: 60px; margin-bottom: 1.5rem; object-fit: contain;">
+                    <p
+                        style="color: var(--ink2); font-weight: 500; font-size: 0.95rem; line-height: 1.8; margin: 0; font-family: 'Inter', sans-serif;">
+                        FableSquare – a digital marketing and creative agency where we help brands find their voice,
+                        tell their stories, and grow with clarity and impact. What started as a spark of an idea has
+                        today become a trusted partner for businesses across industries.</p>
+                </div>
+            </a>
+            <a href="https://yarnbear.com/" target="_blank"
+                style="text-decoration: none; color: inherit; display: block;">
+                <div class="venture-card reveal"
+                    style="text-align: center; background: transparent; border: 1px solid #166534; border-radius: 4px; padding: 3rem 2.5rem; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; transition: transform 0.3s ease;">
+                    <img src="https://yarnbear.com/wp-content/uploads/2025/07/Yarn-Bear.png" alt="Yarn Bear Logo"
+                        style="height: 60px; margin-bottom: 1.5rem; object-fit: contain;">
+                    <p
+                        style="color: var(--ink2); font-weight: 500; font-size: 0.95rem; line-height: 1.8; margin: 0; font-family: 'Inter', sans-serif;">
+                        Yarn Bear – my love for crochet turned into a brand that celebrates handmade charm. From
+                        thoughtful designs to pieces that carry warmth and care, Yarn Bear is all about creating joy
+                        through craft.</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- ══ CONTACT ══ -->
+    <section id="form">
+        <div class="contact-grid">
+            <div class="reveal-l">
+                <p class="sec-label">Get In Touch</p>
+                <h2 class="sec-title">Let's Connect</h2>
+                <div class="sec-div"></div>
+                <div class="cinfo-quote">"Whether it's about my books, upcoming releases, speaking invitations, or
+                    simply a note from a fellow reader — I'd be delighted to hear from you."</div>
+                <div class="cdet">
+                    <div class="cicon"><i class="fa fa-phone"></i></div><a href="tel:+919902016165">+91 9902016165</a>
+                </div>
+                <div class="cdet">
+                    <div class="cicon"><i class="fa fa-envelope"></i></div><a
+                        href="mailto:karnad.mangal@gmail.com">karnad.mangal@gmail.com</a>
+                </div>
+                <div class="social-row">
+                    <a href="https://www.facebook.com/mangal.karnad/" target="_blank" class="sicon"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/mangalkarnad/" target="_blank" class="sicon"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/mangal-d-karnad/" target="_blank" class="sicon"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a href="https://x.com/mdkarnad" target="_blank" class="sicon"><i class="fab fa-x-twitter"></i></a>
+                </div>
+            </div>
+            <form class="cform glass reveal-r" onsubmit="handleSubmit(event)">
+                <div class="frow">
+                    <input type="text" placeholder="Your Name" required />
+                    <input type="tel" placeholder="Phone Number" />
+                </div>
+                <input type="email" placeholder="Email Address" required />
+                <textarea placeholder="Your Message"></textarea>
+                <button type="submit" class="btn-fire"
+                    style="align-self:flex-start;border:none;cursor:pointer;font-family:'Inter',sans-serif;"><span>Send
+                        Message &nbsp;<i class="fa fa-paper-plane fa-sm"></i></span></button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>Copyright &copy;2025 Mangal D Karnad, All Rights Reserved &nbsp;·&nbsp; Designed by <a
+                href="https://fablesquare.com/" target="_blank">Fablesquare</a></p>
+    </footer>
+
+    <script>
+        const cg = document.getElementById('cglow');
+        document.addEventListener('mousemove', e => { cg.style.left = e.clientX + 'px'; cg.style.top = e.clientY + 'px'; });
+        document.addEventListener('mouseleave', () => cg.style.opacity = '0');
+        document.addEventListener('mouseenter', () => cg.style.opacity = '1');
+        const ham = document.getElementById('ham');
+        const navL = document.getElementById('navLinks');
+        ham.addEventListener('click', () => navL.classList.toggle('open'));
+        navL.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navL.classList.remove('open')));
+        const obs = new IntersectionObserver(entries => { entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } }); }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal,.reveal-l,.reveal-r').forEach((el, i) => { el.style.transitionDelay = (i % 5 * 0.09) + 's'; obs.observe(el); });
+        function handleSubmit(e) { e.preventDefault(); const btn = e.target.querySelector('button'); btn.querySelector('span').innerHTML = 'Message Sent! ✓'; setTimeout(() => { btn.querySelector('span').innerHTML = 'Send Message &nbsp;<i class="fa fa-paper-plane fa-sm"></i>'; e.target.reset(); }, 3000); }
+
+        const roles = ["Storyteller", "Speaker on Reinvention", "Branding & Marketing", "Children's Author", "Writer", "Poet"];
+        let twIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const twEl = document.getElementById('tw-text');
+
+        function typeWriter() {
+            if (!twEl) return;
+            const currentRole = roles[twIndex];
+
+            // Apply fade out effect before deleting starts, and fade in when writing starts
+            if (isDeleting && charIndex === currentRole.length) {
+                twEl.style.opacity = '0.3';
+            } else if (!isDeleting && charIndex === 0) {
+                twEl.style.opacity = '1';
+            }
+
+            if (isDeleting) {
+                twEl.textContent = currentRole.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                twEl.textContent = currentRole.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            let typeSpeed = isDeleting ? 40 : 100;
+
+            if (!isDeleting && charIndex === currentRole.length) {
+                typeSpeed = 2500;
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                twIndex = (twIndex + 1) % roles.length;
+                typeSpeed = 600; // Small delay before typing the next word
+            }
+
+            setTimeout(typeWriter, typeSpeed);
+        }
+        typeWriter();
+    </script>
+</body>
+
+</html>
